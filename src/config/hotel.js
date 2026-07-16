@@ -1,0 +1,16 @@
+export const hotel = {
+  name: "PK Group Residency",
+  tagline: "Premium AC & Non-AC Rooms",
+  rating: "4.9",
+  ratingCount: "128",
+  location: "Palakkad, Kerala",
+  address: "Agali, Attappadi, Palakkad, Kerala - 678581",
+  phone: "+919544707888",
+  phoneRaw: "+919544707888",
+  whatsapp: "https://wa.me/919544707888?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20booking%20a%20room%20at%20PK%20Group%20Residency.",
+  instagram: "https://www.instagram.com/pkgroupresidency/",
+  website: "https://pkgroupresidency.com",
+  maps: "https://maps.google.com/?q=PK+Group+Residency+Agali+Kerala",
+  reviews: "https://search.google.com/local/writereview?placeid=ChIJ8_eG3D3WpDsRL0yVl4qjN6I",
+  email: "info@pkgroupresidency.com",
+};
