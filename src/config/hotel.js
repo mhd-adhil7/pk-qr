@@ -8,9 +8,9 @@ export const hotel = {
   phone: "+919544707888",
   phoneRaw: "+919544707888",
   whatsapp: "https://wa.me/919544707888?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20booking%20a%20room%20at%20PK%20Group%20Residency.",
-  instagram: "https://www.instagram.com/pkgroupresidency/",
+  instagram: "https://www.instagram.com/pk_group_residency/",
   website: "https://pkgroupresidency.com",
-  maps: "https://maps.google.com/?q=PK+Group+Residency+Agali+Kerala",
-  reviews: "https://search.google.com/local/writereview?placeid=ChIJ8_eG3D3WpDsRL0yVl4qjN6I",
+  maps: "https://www.google.com/maps/search/?api=1&query=PK+Group+Residency+Mukkali+Kerala",
+  reviews: "https://www.google.com/search?q=PK+Group+Residency+Mukkali+Kerala+Reviews",
   email: "info@pkgroupresidency.com",
 };
