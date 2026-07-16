@@ -28,18 +28,22 @@ export default function Home() {
           className="relative min-h-screen w-full flex justify-center bg-[#0d120f] overflow-x-hidden font-sans select-none"
         >
           
-          {/* Full-screen luxury background with blur and scale */}
+          {/* Full-screen luxury background with blur, scale, and GPU hardware acceleration */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat filter blur-[4px] scale-[1.04] pointer-events-none select-none"
-            style={{ backgroundImage: "url('/background.jpg')" }}
+            className="fixed inset-0 bg-cover bg-center bg-no-repeat filter blur-[4px] scale-[1.04] pointer-events-none select-none z-0"
+            style={{ 
+              backgroundImage: "url('/background.jpg')",
+              transform: "translate3d(0,0,0)",
+              willChange: "transform"
+            }}
           />
           
-          {/* Dark gradient overlay & Vignette */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/75 pointer-events-none" />
-          <div className="absolute inset-0 vignette pointer-events-none" />
+          {/* Fixed Dark gradient overlay & Vignette */}
+          <div className="fixed inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/75 pointer-events-none z-0" />
+          <div className="fixed inset-0 vignette pointer-events-none z-0" />
 
-          {/* Floating glowing circles in the background (luxury aesthetic details) */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Floating glowing circles in the background (GPU accelerated luxury details) */}
+          <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
             <motion.div
               animate={{
                 y: [0, -25, 0],
@@ -50,6 +54,10 @@ export default function Home() {
                 repeat: Infinity,
                 duration: 8,
                 ease: "easeInOut"
+              }}
+              style={{
+                transform: "translate3d(0,0,0)",
+                willChange: "transform"
               }}
               className="absolute top-[18%] left-[-15%] w-72 h-72 rounded-full bg-[#053b2d]/25 blur-3xl"
             />
@@ -64,12 +72,16 @@ export default function Home() {
                 duration: 10,
                 ease: "easeInOut"
               }}
+              style={{
+                transform: "translate3d(0,0,0)",
+                willChange: "transform"
+              }}
               className="absolute bottom-[20%] right-[-15%] w-80 h-80 rounded-full bg-[#084c3b]/15 blur-3xl"
             />
           </div>
 
-          {/* Mobile centered layout container */}
-          <div className="relative w-full max-w-[390px] min-h-screen px-4 pt-8 pb-32 flex flex-col items-center z-10 overflow-y-auto no-scrollbar">
+          {/* Mobile centered native scrolling layout container */}
+          <div className="relative w-full max-w-[390px] px-4 pt-8 pb-32 flex flex-col items-center z-10">
             
             {/* NFC business card component */}
             <NfcCard />
